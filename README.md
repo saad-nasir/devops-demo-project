@@ -2,13 +2,15 @@
 I created this repo, `devops-demo-project`, to play around with a simple web application, written in Node.js, that is containerized using Docker and deployed using a CI/CD pipeline configured in GitHub Actions.
 
 ## Repo Structure
-  - `app/` Directory:
-    - contains the source code for the web application
-    - for Node.js, it includes `index.js`, `package.json`, and `package-lock.json`.
+  - contains the source code for the web application
+  - for Node.js, it includes `index.js`, `package.json`, and `package-lock.json`.
  
 ## Dockerfile
   - defines the steps to create a Docker image of the web app
-  - specifies the base image (Node.js), copies application files and installs dependancies
+  - specifies the base image (Node.js)
+  - sets the working directory inside the container (`/app`)
+  - copies necessary files and installs dependancies
+  - copies rest of the application files into the container
   - exposes the port the app will run on (in this case port `3000`)
   - sets the command to run the app
 
