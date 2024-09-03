@@ -30,7 +30,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/my-web-app:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/my-demo-app:latest
 
       - name: Deploy to Docker Hub Registry
         run: echo "Deployment step can be added here or in subsequent jobs."
